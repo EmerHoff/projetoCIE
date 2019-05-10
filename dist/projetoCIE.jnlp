@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="projetoCIE.jnlp">
+  <information>
+    <title>projetoCIE</title>
+    <vendor>LCASS</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\antlr-2.7.7.jar" size="445288" download="eager" />
+    <jar href="lib\jasn1-1.11.1.jar" size="58612" download="eager" />
+    <jar href="lib\jasn1-compiler-1.11.1.jar" size="126534" download="eager" />
+    <jar href="lib\jxl.jar" size="703322" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\osstoed.jar" size="1158134" download="eager" />
+    <jar href="lib\postgresql-9.4.1209.jar" size="678049" download="eager" />
+    <jar href="projetoCIE.jar" size="73545" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="projetoCIE" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="projetocie.ProjetoCIE"  name="projetoCIE" />
+  <update check="always"/>
+</jnlp>

@@ -161,7 +161,7 @@ public class leitorExcel {
                 listaEstudantes.get(i).setUFInstituicao(listaEstudantes.get(i).getUFInstituicao() + " ");
             }*/
             //Insere QrCode
-            listaEstudantes.get(i).setQRCode("www.crachacartoes.com.br/validacao/" + listaEstudantes.get(i).getCodigoCliente() + listaEstudantes.get(i).getCodigoEstudante());
+            listaEstudantes.get(i).setQRCode("http://www.quempagameia.com.br/validacao.php?id=" + listaEstudantes.get(i).getCodigoCliente() + listaEstudantes.get(i).getCodigoEstudante());
         }
     }
 
@@ -205,7 +205,7 @@ public class leitorExcel {
         FileWriter arq;
         try {
 
-            arq = new FileWriter(endereco.substring(0, endereco.length() - 4) + "TXT.txt");
+            arq = new FileWriter(endereco.substring(0, endereco.length() - 4) + "-ERRO.txt");
 
             PrintWriter gravarArq = new PrintWriter(arq);
 

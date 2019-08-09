@@ -38,7 +38,7 @@ public class bancoCIE {
         }
     }
 
-    public void abreConexao() throws SQLException {
+    /*public void abreConexao() throws SQLException {
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException ex) {
@@ -50,7 +50,7 @@ public class bancoCIE {
 
         //System.out.println("Conexao com Sucesso");
         //connection.close();
-    }
+    }*/
 
     public void fechaConexao() throws SQLException {
         connection.close();
@@ -58,33 +58,33 @@ public class bancoCIE {
 
     public void insereValidacao(Estudante estudante) throws SQLException {
         //abreConexao();
-        conexaoMysql();
+        //conexaoMysql();
         if (connection != null) {
             //cria statement para executar a query
             Statement stm = connection.createStatement();
             //executa query
             //INSERT INTO validacao (codigoEstudante, codigoCertificado) VALUES (504440, 'tesdsadate');
-            stm.executeUpdate("INSERT INTO validacao (codigoEstudante, codigoCertificado) VALUES (" + Integer.parseInt(estudante.getCodigoCliente() + estudante.getCodigoEstudante()) + ", '" + estudante.getCodigoPEM() + "');");
+            stm.executeUpdate("INSERT INTO validacao (codigoEstudante, validade, codigoCertificado) VALUES (" + Integer.parseInt(estudante.getCodigoCliente() + estudante.getCodigoEstudante()) + ", '" + estudante.getDataValidade() + "', '"+ estudante.getCodigoPEM() + "');");
             //postgres:   stm.executeUpdate("INSERT INTO validacao (\"codigoEstudante\", \"codigoCertificado\") VALUES (" + Integer.parseInt(estudante.getCodigoCliente() + estudante.getCodigoEstudante()) + ", '" + estudante.getCodigoPEM() + "')");
         }
-        fechaConexao();
+        //fechaConexao();
     }
 
     public void insereEstudante(Estudante estudante) throws SQLException {
         //abreConexao();
-        conexaoMysql();
+        //conexaoMysql();
         if (connection != null) {
             //cria statement para executar a query
             Statement stm = connection.createStatement();
             //executa query
-            stm.executeUpdate("INSERT INTO estudante(codigoCliente, codigoEstudante, dataNascimento, CPF, numeroMatricula, RG, orgaoExpeditor, instituicao, grauEscolaridade, nomeCurso, municipioInstituicao, UFInstituicao, nomeSocial, nomeEstudante, QRCode)\n"
-                    + " VALUES ('" + estudante.getCodigoCliente() + "', '" + estudante.getCodigoEstudante() + "', '" + estudante.getDataNascimento() + "', '" + estudante.getCPF() + "', '" + estudante.getNumeroMatricula() + "', '" + estudante.getRG() + "', '" + estudante.getOrgaoExpeditor() + "', '" + estudante.getInstituicao() + "', '" + estudante.getGrauEscolaridade() + "', '" + estudante.getNomeCurso() + "', '" + estudante.getMunicipioInstituicao() + "', '" + estudante.getUFInstituicao() + "', '" + estudante.getNomeSocial() + "', '" + estudante.getNomeEstudante() + "', '" + estudante.getQRCode() + "');");
+            stm.executeUpdate("INSERT INTO estudante(codigoCliente, codigoEstudante, dataNascimento, CPF, numeroMatricula, RG, orgaoExpeditor, instituicao, grauEscolaridade, nomeCurso, municipioInstituicao, UFInstituicao, nomeSocial, nomeEstudante, QRCode, id)\n"
+                    + " VALUES ('" + estudante.getCodigoCliente() + "', '" + estudante.getCodigoEstudante() + "', '" + estudante.getDataNascimento() + "', '" + estudante.getCPF() + "', '" + estudante.getNumeroMatricula() + "', '" + estudante.getRG() + "', '" + estudante.getOrgaoExpeditor() + "', '" + estudante.getInstituicao() + "', '" + estudante.getGrauEscolaridade() + "', '" + estudante.getNomeCurso() + "', '" + estudante.getMunicipioInstituicao() + "', '" + estudante.getUFInstituicao() + "', '" + estudante.getNomeSocial() + "', '" + estudante.getNomeEstudante() + "', '" + estudante.getQRCode() + "', '" + estudante.codigoCliente + estudante.codigoEstudante + "');");
         }
-        fechaConexao();
+        //fechaConexao();
     }
 
     public void buscaCertificado() throws SQLException {
-        conexaoMysql();
+        //conexaoMysql();
         if (connection != null) {
             //cria statement para executar a query
             Statement stm = connection.createStatement();
@@ -108,6 +108,6 @@ public class bancoCIE {
             }
 
         }
-        fechaConexao();
+        //fechaConexao();
     }
 }

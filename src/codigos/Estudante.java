@@ -5,6 +5,8 @@
  */
 package codigos;
 
+import java.util.Date;
+
 /**
  *
  * @author Emerson
@@ -28,6 +30,7 @@ public class Estudante {
     public String QRCode;
     public String codigoHex;
     public String codigoPEM;
+    public String dataValidade;
 
     public Estudante() {
         this.codigoCliente = codigoCliente;
@@ -47,6 +50,7 @@ public class Estudante {
         this.QRCode = QRCode;
         this.codigoHex = codigoHex;
         this.codigoPEM = codigoPEM;
+        this.dataValidade = dataValidade;
     }
 
     public String getCodigoCliente() {
@@ -183,6 +187,14 @@ public class Estudante {
 
     public void setCodigoPEM(String codigoPEM) {
         this.codigoPEM = codigoPEM;
+    }
+
+    public String getDataValidade() {
+        return dataValidade;
+    }
+
+    public void setDataValidade(String dataValidade) {
+        this.dataValidade = dataValidade;
     }
     
     

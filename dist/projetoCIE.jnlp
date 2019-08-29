@@ -16,7 +16,7 @@
     <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
     <jar href="lib\osstoed.jar" size="1158134" download="eager" />
     <jar href="lib\postgresql-9.4.1209.jar" size="678049" download="eager" />
-    <jar href="projetoCIE.jar" size="129065" download="eager" />
+    <jar href="projetoCIE.jar" size="135597" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="projetoCIE" >
     <param name="requiredFXVersion" value="8.0+"/>

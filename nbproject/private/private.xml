@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Emerson/Downloads/Projeto%20Carteirinhas/projetoCIE/src/projetocie/CIEView.fxml</file>
+            <file>file:/C:/Users/Emerson/Downloads/Projeto%20Carteirinhas/projetoCIE/src/projetocie/OptionsViewController.java</file>
+            <file>file:/C:/Users/Emerson/Downloads/Projeto%20Carteirinhas/projetoCIE/src/codigos/geradorCIE.java</file>
             <file>file:/C:/Users/Emerson/Downloads/Projeto%20Carteirinhas/projetoCIE/src/codigos/bancoCIE.java</file>
-            <file>file:/C:/Users/Emerson/Downloads/Projeto%20Carteirinhas/projetoCIE/src/codigos/leitorExcel.java</file>
             <file>file:/C:/Users/Emerson/Downloads/Projeto%20Carteirinhas/projetoCIE/src/projetocie/CIEViewController.java</file>
+            <file>file:/C:/Users/Emerson/Downloads/Projeto%20Carteirinhas/projetoCIE/src/codigos/Estudante.java</file>
         </group>
     </open-files>
 </project-private>

@@ -48,12 +48,14 @@ import java.security.SignatureException;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.bind.DatatypeConverter;
+import javax.xml.bind.ParseConversionEvent;
 import org.postgresql.util.Base64;
 import pkix1explicit88.AlgorithmIdentifier;
 import projetocie.CIEViewController;
@@ -572,7 +574,10 @@ public class geradorCIE {
         estudante.setCodigoPEM(Base64.encodeBytes(os.getArray()).replace("\n", ""));
         
         //Date today = new Date(2020, 3, 31);
-        String date = "2020-03-31";
+        //Adiciona a data de validade da CIE para dia 31/03 do proximo ano
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        year++;
+        String date = String.valueOf(year) + "-03-31";
         estudante.setDataValidade(date);
 
         return flag;
